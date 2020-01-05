@@ -19,12 +19,10 @@ public class GamePanel extends JPanel implements KeyListener,ActionListener {
     String fx;
     boolean isStart = false;//游戏是否开始
     Timer timer = new Timer(100,  this);
-
     int foodX;
     int foodY;
     Random random = new Random();
     boolean isFail = false;
-
     int score;
 
     public GamePanel(){
@@ -171,6 +169,5 @@ public class GamePanel extends JPanel implements KeyListener,ActionListener {
     public void keyReleased(KeyEvent e) {
 
     }
-
 
 }
