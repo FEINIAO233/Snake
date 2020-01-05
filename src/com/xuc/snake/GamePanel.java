@@ -17,7 +17,7 @@ public class GamePanel extends JPanel implements KeyListener,ActionListener {
     int[] snakeX = new int[600];
     int[] snakeY = new int[500];
     String fx;
-    boolean isStart = false; //游戏是否开始
+    boolean isStart = false;  //游戏是否开始
     Timer timer = new Timer(100,  this);
     int foodX;
     int foodY;
