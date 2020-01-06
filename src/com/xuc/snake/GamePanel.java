@@ -18,7 +18,8 @@ public class GamePanel extends JPanel implements KeyListener,ActionListener {
     int[] snakeY = new int[500];
     String fx;
     boolean isStart = false;    //游戏是否开始
-    Timer timer = new Timer(100,  this);
+    int heardLevel = 400;
+    Timer timer = new Timer(heardLevel,  this);
     int foodX;
     int foodY;
     Random random = new Random();
@@ -147,6 +148,10 @@ public class GamePanel extends JPanel implements KeyListener,ActionListener {
             if(snakeX[0] == foodX && snakeY[0] == foodY){
                 length ++ ;
                 score += 10;
+                if(heardLevel != 50){
+                    heardLevel -= 50;
+                }
+                timer.setDelay(heardLevel);
                 foodX = 25 + 25 * random.nextInt(34);
                 foodY = 75 + 25 * random.nextInt(24);
             }
